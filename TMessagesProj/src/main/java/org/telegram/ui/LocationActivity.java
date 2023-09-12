@@ -757,7 +757,7 @@ public class LocationActivity extends BaseFragment implements NotificationCenter
         mapTypeButton.setSubMenuOpenSide(2);
         mapTypeButton.setAdditionalXOffset(AndroidUtilities.dp(10));
         mapTypeButton.setAdditionalYOffset(-AndroidUtilities.dp(10));
-        mapTypeButton.addSubItem(map_list_menu_osm, R.drawable.msg_map, "Standard OSM"), getResourceProvider());
+        mapTypeButton.addSubItem(map_list_menu_osm, R.drawable.msg_map, "Standard OSM", getResourceProvider());
         mapTypeButton.addSubItem(map_list_menu_wiki, R.drawable.msg_map, "Wikimedia", getResourceProvider());
         mapTypeButton.addSubItem(map_list_menu_cartodark, R.drawable.msg_map, "Carto Dark", getResourceProvider());
         mapTypeButton.setContentDescription(LocaleController.getString("AccDescrMoreOptions", R.string.AccDescrMoreOptions));
@@ -1894,7 +1894,7 @@ public class LocationActivity extends BaseFragment implements NotificationCenter
         controller.setCenter(initLocation);
         controller.setZoom(7.);
 
-        final float zoom = initialMaxZoom ? map.getMinZoomLevel() + 4 : map.getMaxZoomLevel() - 4;
+        final float zoom = initialMaxZoom ? mapView.getMinZoomLevel() + 4 : mapView.getMaxZoomLevel() - 4;
         if (chatLocation != null) {
             LiveLocation liveLocation = addUserMarker(chatLocation);
             controller.setCenter(liveLocation.marker.getPosition());
