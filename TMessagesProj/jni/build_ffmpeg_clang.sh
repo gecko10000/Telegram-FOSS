@@ -82,6 +82,7 @@ function build_one {
 	--enable-swscale \
 	--enable-protocol=file \
 	--enable-decoder=opus \
+	--enable-decoder=mp3 \
 	--enable-decoder=h264 \
 	--enable-decoder=mpeg4 \
 	--enable-decoder=mjpeg \
@@ -91,6 +92,7 @@ function build_one {
 	--enable-demuxer=gif \
 	--enable-demuxer=ogg \
 	--enable-demuxer=matroska \
+	--enable-demuxer=mp3 \
 	--enable-hwaccels \
 	$ADDITIONAL_CONFIGURE_FLAG
 
